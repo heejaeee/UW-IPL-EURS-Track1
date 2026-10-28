@@ -1,0 +1,21 @@
+/opt/conda/lib/python3.11/site-packages/torch/cuda/__init__.py:235: UserWarning:
+NVIDIA GeForce RTX 5080 with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_50 sm_60 sm_70 sm_75 sm_80 sm_86 sm_90.
+If you want to use the NVIDIA GeForce RTX 5080 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+{
+  "torch": "2.5.1+cu124",
+  "device": "NVIDIA GeForce RTX 5080",
+  "compiled_arches": [
+    "sm_50",
+    "sm_60",
+    "sm_70",
+    "sm_75",
+    "sm_80",
+    "sm_86",
+    "sm_90"
+  ],
+  "kernel_ok": false,
+  "error": "Traceback (most recent call last):\n  File \"<string>\", line 4, in <module>\nRuntimeError: CUDA error: no kernel image is available for execution on the device\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n"
+}

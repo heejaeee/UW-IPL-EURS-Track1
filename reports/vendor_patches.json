@@ -1,5 +1,5 @@
 {
-  "SAM3": "Unmodified inference implementation. CPU-only construction is unsupported upstream; diagnostic CPU fallback was reverted. CUDA is required.",
+  "SAM3": "Inference math is unchanged. Removed online checkpoint resolution and require an existing local checkpoint before allocating the image model. The upstream CPU-only construction limitation remains; CUDA inference is required.",
   "ConceptBank": "Original framework-only adapter: mmseg registry/BaseSegmentor replaced by torch.nn.Module. All prediction methods preserved.",
-  "CascadePSP": "Unmodified inference implementation; downloads explicitly disabled."
+  "CascadePSP": "Inference math is unchanged. Removed automatic download/re-download; missing or corrupt checkpoints raise clear local errors, with no overwrite or network fallback. Original checksum is preserved and evaluated in streaming chunks."
 }

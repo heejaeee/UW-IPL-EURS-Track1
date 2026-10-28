@@ -1,0 +1,166 @@
+{
+  "date_utc": "2026-10-28T08:42:32.903072+00:00",
+  "previous_commit": "307f66a3eeebcfb81536054cb914e8097a225a91",
+  "original_warnings": [
+    "warning vendor/segmentation_refinement/download.py seems to use the network; the reproduction runs with NO network (weights must come from weights/)",
+    "warning vendor/sam3/model_builder.py seems to use the network; the reproduction runs with NO network (weights must come from weights/)",
+    "warning requirements.txt lists packages the base image already has (numpy, pillow, einops, opencv-python-headless, timm, scipy, pyyaml): installing them would replace the organizers' versions (PyTorch 2.4.0 etc.) and change your results. List ONLY extra packages; leave the file empty if you need none"
+  ],
+  "current_static_errors": 0,
+  "current_static_warnings": 0,
+  "official_checker_sha256": "49f8dce1e5604b4180cf22e7fe9de157f094c1897855891152046e0d88229644",
+  "official_checker_unchanged": true,
+  "root_direct_dependency_pins_unchanged": true,
+  "default_image_probe": {
+    "package_folder": "/relocated/package",
+    "socket_attempts": 0,
+    "checks": {
+      "offline_imports": true,
+      "cascade_missing": "CascadePSP requires a valid local weight file: /tmp/tmpzzqfdd_n/missing.pt. Fetch and extract the archive with repro_check.py --download-weights before starting offline inference. No automatic download is attempted.",
+      "cascade_download_disabled": "CascadePSP requires a valid local weight file: /tmp/tmpzzqfdd_n/missing.pt. Fetch and extract the archive with repro_check.py --download-weights before starting offline inference. No automatic download is attempted.",
+      "sam3_missing": "SAM3 requires an existing local checkpoint_path. Fetch and extract the archive with repro_check.py --download-weights before offline inference.",
+      "sam3_default": "SAM3 requires an existing local checkpoint_path. Fetch and extract the archive with repro_check.py --download-weights before offline inference.",
+      "sam3_download_disabled": "sam3 automatic checkpoint downloads are disabled. Supply a local checkpoint_path from the verified weight archive.",
+      "cascade_corrupt": "CascadePSP local weight checksum mismatch: /tmp/tmpzzqfdd_n/corrupt.pt. Restore the verified weight archive before offline inference; the invalid file has not been modified.",
+      "cascade_published_checksum": true
+    },
+    "versions": {
+      "torch": "2.4.0",
+      "numpy": "2.4.6",
+      "pillow": "10.4.0",
+      "einops": "0.8.2",
+      "opencv-python-headless": "5.0.0.93",
+      "timm": "1.0.30",
+      "scipy": "1.17.1",
+      "pyyaml": "6.0.1",
+      "huggingface_hub": "2.2.0"
+    },
+    "passed": true
+  },
+  "root_image_probe": {
+    "package_folder": "/relocated/package",
+    "socket_attempts": 0,
+    "checks": {
+      "offline_imports": true,
+      "cascade_missing": "CascadePSP requires a valid local weight file: /tmp/tmpe23_3u14/missing.pt. Fetch and extract the archive with repro_check.py --download-weights before starting offline inference. No automatic download is attempted.",
+      "cascade_download_disabled": "CascadePSP requires a valid local weight file: /tmp/tmpe23_3u14/missing.pt. Fetch and extract the archive with repro_check.py --download-weights before starting offline inference. No automatic download is attempted.",
+      "sam3_missing": "SAM3 requires an existing local checkpoint_path. Fetch and extract the archive with repro_check.py --download-weights before offline inference.",
+      "sam3_default": "SAM3 requires an existing local checkpoint_path. Fetch and extract the archive with repro_check.py --download-weights before offline inference.",
+      "sam3_download_disabled": "sam3 automatic checkpoint downloads are disabled. Supply a local checkpoint_path from the verified weight archive.",
+      "cascade_corrupt": "CascadePSP local weight checksum mismatch: /tmp/tmpe23_3u14/corrupt.pt. Restore the verified weight archive before offline inference; the invalid file has not been modified.",
+      "cascade_published_checksum": true
+    },
+    "versions": {
+      "torch": "2.5.1+cu124",
+      "numpy": "1.26.4",
+      "pillow": "10.4.0",
+      "einops": "0.8.2",
+      "opencv-python-headless": "4.11.0.86",
+      "timm": "1.0.30",
+      "scipy": "1.17.1",
+      "pyyaml": "6.0.2",
+      "huggingface_hub": "2.3.0"
+    },
+    "passed": true
+  },
+  "root_gpu_probe": {
+    "torch": "2.5.1+cu124",
+    "device": "NVIDIA GeForce RTX 5080",
+    "compiled_arches": [
+      "sm_50",
+      "sm_60",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90"
+    ],
+    "kernel_ok": false,
+    "error": "Traceback (most recent call last):\n  File \"<string>\", line 4, in <module>\nRuntimeError: CUDA error: no kernel image is available for execution on the device\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n"
+  },
+  "gpu_pixel_comparison": {
+    "images": 5,
+    "png_files": 10,
+    "all_pixels_identical": true,
+    "all_png_bytes_identical": true,
+    "network": "none",
+    "root_filesystem": "read-only",
+    "run_package_folder": "/relocated/package",
+    "weights_source": "actual_HF_download",
+    "pytorch": "2.7.1+cu128",
+    "peak_allocated_GiB": 5.597033500671387,
+    "results": [
+      {
+        "file": "restored/test04_3_55.png",
+        "different_values": 0,
+        "max_abs_difference": 0,
+        "file_bytes_identical": true
+      },
+      {
+        "file": "restored/test04_4_25.png",
+        "different_values": 0,
+        "max_abs_difference": 0,
+        "file_bytes_identical": true
+      },
+      {
+        "file": "restored/test04_5_100.png",
+        "different_values": 0,
+        "max_abs_difference": 0,
+        "file_bytes_identical": true
+      },
+      {
+        "file": "restored/test04_7_35.png",
+        "different_values": 0,
+        "max_abs_difference": 0,
+        "file_bytes_identical": true
+      },
+      {
+        "file": "restored/test09_6_65.png",
+        "different_values": 0,
+        "max_abs_difference": 0,
+        "file_bytes_identical": true
+      },
+      {
+        "file": "seg_masks/test04_3_55.png",
+        "different_values": 0,
+        "max_abs_difference": 0,
+        "file_bytes_identical": true
+      },
+      {
+        "file": "seg_masks/test04_4_25.png",
+        "different_values": 0,
+        "max_abs_difference": 0,
+        "file_bytes_identical": true
+      },
+      {
+        "file": "seg_masks/test04_5_100.png",
+        "different_values": 0,
+        "max_abs_difference": 0,
+        "file_bytes_identical": true
+      },
+      {
+        "file": "seg_masks/test04_7_35.png",
+        "different_values": 0,
+        "max_abs_difference": 0,
+        "file_bytes_identical": true
+      },
+      {
+        "file": "seg_masks/test09_6_65.png",
+        "different_values": 0,
+        "max_abs_difference": 0,
+        "file_bytes_identical": true
+      }
+    ]
+  },
+  "image_ids": {
+    "uwipl-track1-repro:warning-fix": "sha256:4e6a360fc5d94e89fcbdb2f8dc0d0bf958689864c845242cf71fa6064f82ff62",
+    "uwipl-track1-repro:default-warning-test": "sha256:97d618deba8b9bda7902eea0838e994b28f20d573f24743592cb1c4f3df3a504",
+    "uwipl-track1-repro:cuda128-warning-fix": "sha256:2a61fb20058b932cd26f323cd55146ecf498b3899bb2161c19d31b0a5e324e2e"
+  },
+  "gpu_execution_container": "uwipl-track1-repro:cuda128-warning-fix",
+  "root_torch251_gpu_execution_verified": false,
+  "default_torch240_full_gpu_inference_verified": false,
+  "weight_archive_unchanged": true,
+  "weight_archive_sha256": "87497b7a5b854ffb79739267fe29423b06f3addc42c7f46e07970d07f473569c",
+  "github_push_performed": false
+}

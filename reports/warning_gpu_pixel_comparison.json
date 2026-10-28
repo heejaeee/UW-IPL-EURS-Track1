@@ -1,0 +1,74 @@
+{
+  "images": 5,
+  "png_files": 10,
+  "all_pixels_identical": true,
+  "all_png_bytes_identical": true,
+  "network": "none",
+  "root_filesystem": "read-only",
+  "run_package_folder": "/relocated/package",
+  "weights_source": "actual_HF_download",
+  "pytorch": "2.7.1+cu128",
+  "peak_allocated_GiB": 5.597033500671387,
+  "results": [
+    {
+      "file": "restored/test04_3_55.png",
+      "different_values": 0,
+      "max_abs_difference": 0,
+      "file_bytes_identical": true
+    },
+    {
+      "file": "restored/test04_4_25.png",
+      "different_values": 0,
+      "max_abs_difference": 0,
+      "file_bytes_identical": true
+    },
+    {
+      "file": "restored/test04_5_100.png",
+      "different_values": 0,
+      "max_abs_difference": 0,
+      "file_bytes_identical": true
+    },
+    {
+      "file": "restored/test04_7_35.png",
+      "different_values": 0,
+      "max_abs_difference": 0,
+      "file_bytes_identical": true
+    },
+    {
+      "file": "restored/test09_6_65.png",
+      "different_values": 0,
+      "max_abs_difference": 0,
+      "file_bytes_identical": true
+    },
+    {
+      "file": "seg_masks/test04_3_55.png",
+      "different_values": 0,
+      "max_abs_difference": 0,
+      "file_bytes_identical": true
+    },
+    {
+      "file": "seg_masks/test04_4_25.png",
+      "different_values": 0,
+      "max_abs_difference": 0,
+      "file_bytes_identical": true
+    },
+    {
+      "file": "seg_masks/test04_5_100.png",
+      "different_values": 0,
+      "max_abs_difference": 0,
+      "file_bytes_identical": true
+    },
+    {
+      "file": "seg_masks/test04_7_35.png",
+      "different_values": 0,
+      "max_abs_difference": 0,
+      "file_bytes_identical": true
+    },
+    {
+      "file": "seg_masks/test09_6_65.png",
+      "different_values": 0,
+      "max_abs_difference": 0,
+      "file_bytes_identical": true
+    }
+  ]
+}

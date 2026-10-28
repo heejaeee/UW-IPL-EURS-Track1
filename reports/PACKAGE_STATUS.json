@@ -24,12 +24,15 @@
       "verification_report": "reports/hf_weights_verification.json"
     },
     "static_errors": 0,
-    "static_warnings": 3,
-    "static_warning_explanation": "Upstream optional download functions are not called (local weights and offline run verified). Requirements pin dependencies for the explicitly requested custom Docker image.",
+    "static_warnings": 0,
+    "static_warning_explanation": "Resolved by removing optional automatic downloads and separating default-image extras from unchanged custom-Docker runtime pins. Official checker unmodified.",
     "contact": "hkwon4@uw.edu",
     "hf_download_verified": true,
     "hf_extraction_verified": true,
-    "verification_report": "reports/hf_weights_verification.json"
+    "verification_report": "reports/hf_weights_verification.json",
+    "warning_audit": "reports/warning_audit.json",
+    "relocated_offline_cuda128_run5_after_fixes": true,
+    "warning_fixes_run5_pngs_bitexact": true
   },
   "Track2": {
     "directory": "UW-IPL-EURS-Track2-Final",

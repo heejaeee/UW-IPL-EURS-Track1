@@ -2,7 +2,7 @@
 # The requested submission Dockerfile at the repository root remains 2.5.1.
 FROM pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime
 WORKDIR /pkg
-COPY requirements.txt /tmp/uwipl-requirements.txt
+COPY docker/requirements-runtime.txt /tmp/uwipl-requirements.txt
 RUN pip install --no-cache-dir -r /tmp/uwipl-requirements.txt
 ENV HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONDONTWRITEBYTECODE=1
 COPY . /pkg

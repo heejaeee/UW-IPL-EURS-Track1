@@ -13,5 +13,10 @@
   "cuda128_container_validation_pending": false,
   "cuda128_container_run5_passed": true,
   "cuda128_container_pixels_match_host": false,
-  "CPU_only_supported": false
+  "CPU_only_supported": false,
+  "warning_audit": "reports/warning_audit.json",
+  "warning_fixes_relocated_offline_run5_passed": true,
+  "warning_fixes_run5_pngs_bitexact": true,
+  "current_static_errors": 0,
+  "current_static_warnings": 0
 }

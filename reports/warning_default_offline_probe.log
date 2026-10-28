@@ -1,0 +1,30 @@
+/opt/conda/lib/python3.11/site-packages/torch/amp/autocast_mode.py:265: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+{
+  "package_folder": "/relocated/package",
+  "socket_attempts": 0,
+  "checks": {
+    "offline_imports": true,
+    "cascade_missing": "CascadePSP requires a valid local weight file: /tmp/tmpzzqfdd_n/missing.pt. Fetch and extract the archive with repro_check.py --download-weights before starting offline inference. No automatic download is attempted.",
+    "cascade_download_disabled": "CascadePSP requires a valid local weight file: /tmp/tmpzzqfdd_n/missing.pt. Fetch and extract the archive with repro_check.py --download-weights before starting offline inference. No automatic download is attempted.",
+    "sam3_missing": "SAM3 requires an existing local checkpoint_path. Fetch and extract the archive with repro_check.py --download-weights before offline inference.",
+    "sam3_default": "SAM3 requires an existing local checkpoint_path. Fetch and extract the archive with repro_check.py --download-weights before offline inference.",
+    "sam3_download_disabled": "sam3 automatic checkpoint downloads are disabled. Supply a local checkpoint_path from the verified weight archive.",
+    "cascade_corrupt": "CascadePSP local weight checksum mismatch: /tmp/tmpzzqfdd_n/corrupt.pt. Restore the verified weight archive before offline inference; the invalid file has not been modified.",
+    "cascade_published_checksum": true
+  },
+  "versions": {
+    "torch": "2.4.0",
+    "numpy": "2.4.6",
+    "pillow": "10.4.0",
+    "einops": "0.8.2",
+    "opencv-python-headless": "5.0.0.93",
+    "timm": "1.0.30",
+    "scipy": "1.17.1",
+    "pyyaml": "6.0.1",
+    "huggingface_hub": "2.2.0"
+  },
+  "passed": true
+}

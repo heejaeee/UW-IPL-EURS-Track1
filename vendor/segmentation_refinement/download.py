@@ -1,47 +1,36 @@
 import os
-import requests
 import hashlib
 
 
 def download_model(destination):
-    print('Downloading model file into', destination)
-    URL = 'https://github.com/hkchengrex/CascadePSP/releases/download/v1.0/model'
-
-    with open(destination, 'wb') as file:
-        response = requests.get(URL)
-        file.write(response.content)
-
-    print('Download completed.')
+    """Automatic downloads are disabled in this offline reproduction package."""
+    raise FileNotFoundError(
+        f'CascadePSP requires a valid local weight file: {destination}. '
+        'Fetch and extract the archive with repro_check.py --download-weights '
+        'before starting offline inference. No automatic download is attempted.'
+    )
 
 
 def check_model(destination):
     correct_md5 = '7478d4a9c42ab52beb6d7e9683402fe0'
 
+    digest = hashlib.md5()
     with open(destination, 'rb') as f:
-        md5_returned = hashlib.md5(f.read()).hexdigest()
+        for chunk in iter(lambda: f.read(8 << 20), b''):
+            digest.update(chunk)
+    md5_returned = digest.hexdigest()
 
     return correct_md5 == md5_returned
 
 
 def download_and_or_check_model_file(destination):
 
-    if os.path.exists(destination):
-        # print('Model file exists.')
-        pass
-    else:
-        print('Model does not exist.')
+    if not os.path.isfile(destination):
         download_model(destination)
-
-    md5_passed = check_model(destination)
-
-    if md5_passed:
-        return
-
-    print('MD5 of the model file does not match')
-    print('Downloading the model again...')
-    download_model(destination)
-
-    md5_passed = check_model(destination)
-    assert md5_passed, 'MD5 still does not pass'
-    
+    if not check_model(destination):
+        raise ValueError(
+            f'CascadePSP local weight checksum mismatch: {destination}. '
+            'Restore the verified weight archive before offline inference; '
+            'the invalid file has not been modified.'
+        )
 

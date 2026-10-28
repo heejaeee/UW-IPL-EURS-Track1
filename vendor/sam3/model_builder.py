@@ -8,7 +8,6 @@ from typing import Optional
 import pkg_resources
 import torch
 import torch.nn as nn
-from huggingface_hub import hf_hub_download
 from iopath.common.file_io import g_pathmgr
 from sam3.model.decoder import (
     DecoupledTransformerDecoderLayerv2,
@@ -595,6 +594,13 @@ def build_sam3_image_model(
     Returns:
         A SAM3 image model
     """
+    # The reproduction entrypoint supplies the published local checkpoint.
+    # Fail before model allocation if it is missing; never use an online fallback.
+    if checkpoint_path is None or not os.path.isfile(checkpoint_path):
+        raise FileNotFoundError(
+            'SAM3 requires an existing local checkpoint_path. Fetch and extract '
+            'the archive with repro_check.py --download-weights before offline inference.'
+        )
     if bpe_path is None:
         bpe_path = pkg_resources.resource_filename(
             "sam3", "assets/bpe_simple_vocab_16e6.txt.gz"
@@ -655,22 +661,11 @@ def build_sam3_image_model(
 
 
 def download_ckpt_from_hf(version="sam3"):
-    """Download model checkpoint from HuggingFace Hub.
-
-    Args:
-        version: "sam3" or "sam3.1"
-    """
-    if version == "sam3.1":
-        repo_id = "facebook/sam3.1"
-        ckpt_name = "sam3.1_multiplex.pt"
-        cfg_name = "config.json"
-    else:
-        repo_id = "facebook/sam3"
-        ckpt_name = "sam3.pt"
-        cfg_name = "config.json"
-    _ = hf_hub_download(repo_id=repo_id, filename=cfg_name)
-    checkpoint_path = hf_hub_download(repo_id=repo_id, filename=ckpt_name)
-    return checkpoint_path
+    """Retain the upstream API but prohibit online checkpoint resolution."""
+    raise FileNotFoundError(
+        f'{version} automatic checkpoint downloads are disabled. '
+        'Supply a local checkpoint_path from the verified weight archive.'
+    )
 
 
 def build_sam3_video_model(

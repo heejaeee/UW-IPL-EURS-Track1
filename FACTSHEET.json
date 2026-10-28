@@ -53,7 +53,6 @@
   "testing_hyperparameter_selection": false,
   "online_adaptation": false,
   "cross_image_statistics": false,
-  "public_push_performed": false,
   "track": 1,
   "external_assets": [
     {
@@ -138,5 +137,6 @@
     "download_verified": true,
     "extraction_verified": true,
     "verification_report": "reports/hf_weights_verification.json"
-  }
+  },
+  "public_repository": "https://github.com/heejaeee/UW-IPL-EURS-Track1"
 }

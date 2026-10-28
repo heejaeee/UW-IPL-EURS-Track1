@@ -1,6 +1,6 @@
 # UW-IPL EURS Track1 reproduction
 
-Local reproduction package using the unmodified official [template](https://github.com/CeviKle/EURS-MaCVi2027-repro-template). The owner published the weight archive on Hugging Face; no GitHub push has been performed.
+Reproduction package for submission **#19050**, using the unmodified official [template](https://github.com/CeviKle/EURS-MaCVi2027-repro-template). Public repository: [heejaeee/UW-IPL-EURS-Track1](https://github.com/heejaeee/UW-IPL-EURS-Track1). The weight archive is hosted on Hugging Face.
 
 Read METHOD.md, FACTSHEET.json, DATA_AND_LICENSES.md and STATUS_KO.md. Runtime entrypoints use package-relative paths and local weights. Network access is not needed during inference/export.
 

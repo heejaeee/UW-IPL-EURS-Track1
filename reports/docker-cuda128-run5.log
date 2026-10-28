@@ -1,0 +1,30 @@
+checking /pkg
+
+ERROR   repro.yaml: contact must be an e-mail address
+ok      METHOD.md
+ok      run.py main() signature
+ERROR   weights are committed in weights/ AND weights/weights_link.yaml exists: keep only one. Delete weights/weights_link.yaml if the committed weights are the ones to use, or remove the committed files and keep the link
+ERROR   weights/weights_link.yaml: `url:` must be an https link (if your weights are committed in weights/, delete weights/weights_link.yaml)
+ok      Dockerfile at the repository root (used instead of the base image + requirements.txt)
+warning vendor/segmentation_refinement/download.py seems to use the network; the reproduction runs with NO network (weights must come from weights/)
+warning vendor/sam3/model_builder.py seems to use the network; the reproduction runs with NO network (weights must come from weights/)
+warning requirements.txt lists packages the base image already has (numpy, pillow, einops, opencv-python-headless, timm, scipy, pyyaml): installing them would replace the organizers' versions (PyTorch 2.4.0 etc.) and change your results. List ONLY extra packages; leave the file empty if you need none
+{"stage": "restoration", "completed": 1, "total": 5}
+{"stage": "restoration", "completed": 2, "total": 5}
+{"stage": "restoration", "completed": 3, "total": 5}
+{"stage": "restoration", "completed": 4, "total": 5}
+{"stage": "restoration", "completed": 5, "total": 5}
+/opt/conda/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/pkg/vendor/sam3/model/encoder.py:362: UserWarning: Specified kernel cache directory could not be created! This disables kernel caching. Specified directory is /root/.cache/torch/kernels. This warning will appear only once per process. (Triggered internally at /pytorch/aten/src/ATen/native/cuda/jit_utils.cpp:1491.)
+  spatial_shapes.prod(1).cumsum(0)[:-1],
+{"stage": "segmentation", "completed": 1, "total": 5}
+{"stage": "segmentation", "completed": 2, "total": 5}
+{"stage": "segmentation", "completed": 3, "total": 5}
+{"stage": "segmentation", "completed": 4, "total": 5}
+{"stage": "segmentation", "completed": 5, "total": 5}
+{"stage": "complete", "images": 5, "seconds": 29.37088693981059, "peak_allocated_GiB": 5.597033500671387}
+ok      run.py main() ran on 5 image(s) in 29.8 s (5.95 s/image including start-up)
+
+3 error(s), 3 warning(s)
+NOT READY: fix the errors above

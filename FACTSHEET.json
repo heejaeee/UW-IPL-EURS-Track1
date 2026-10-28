@@ -1,0 +1,129 @@
+{
+  "team": "UW-IPL",
+  "segmentation_train_scenes": [
+    "fish1",
+    "fish11",
+    "fish13",
+    "fish14",
+    "fish15",
+    "fish17",
+    "fish18",
+    "fish2",
+    "fish20",
+    "fish4",
+    "fish5",
+    "fish7",
+    "fish9",
+    "sharkFish",
+    "starfish2",
+    "turtles1"
+  ],
+  "local_validation_and_selection_scenes": [
+    "fish12",
+    "fish21",
+    "ray1",
+    "seahorse1"
+  ],
+  "teacher_E034_train_scenes": [
+    "fish1",
+    "fish11",
+    "fish13",
+    "fish14",
+    "fish17",
+    "fish2",
+    "fish20",
+    "fish4",
+    "fish7",
+    "fish9",
+    "ray1",
+    "seahorse1",
+    "sharkFish",
+    "starfish2"
+  ],
+  "teacher_E034_validation_scenes": [
+    "fish12",
+    "fish21",
+    "fish5",
+    "turtles1",
+    "fish15",
+    "fish18"
+  ],
+  "local_validation_caveat": "ray1 and seahorse1 were used to train the inherited E034 teacher; the four-scene local validation is not independent of that teacher.",
+  "testing_policy": "No testing-phase images were used to train or tune the final lineage. Earlier rejected isolated research was retired; see historical audit. Testing inputs are used here only for requested fixed-output reproduction checks.",
+  "testing_hyperparameter_selection": false,
+  "online_adaptation": false,
+  "cross_image_statistics": false,
+  "public_push_performed": false,
+  "track": 1,
+  "external_assets": [
+    {
+      "name": "SAM3",
+      "url": "https://github.com/facebookresearch/sam3",
+      "license": "SAM License, November19 2025; bundled actual LICENSE, not MIT despite pyproject classifier",
+      "role": "Track1 frozen image/text model; Track2 logit and feature teacher"
+    },
+    {
+      "name": "Restormer",
+      "url": "https://github.com/swz30/Restormer",
+      "license": "MIT",
+      "role": "E034 label-conditioned pretrained SIDD real-denoising Restormer; smaller custom Restormer384 using the same layers"
+    },
+    {
+      "name": "CascadePSP",
+      "url": "https://github.com/hkchengrex/CascadePSP",
+      "license": "MIT (bundled)",
+      "role": "Track1 OTHER boundary refinement; NOT mixed into Track2 soft teacher targets"
+    },
+    {
+      "name": "ConceptBank",
+      "url": "https://github.com/pgsmall/ConceptBank",
+      "license": "No LICENSE file found in pinned checkout; licensing not verified. Source attribution retained; confirm redistribution terms before public release.",
+      "role": "Track1 train-only support/text fusion; retained in Track2 teacher"
+    },
+    {
+      "name": "UIIS10K TRAIN",
+      "url": "https://github.com/LiamLian0727/UIIS10K",
+      "license": "Apache-2.0 download LICENSE; upstream image rights may vary",
+      "role": "E034 synthesis clean sources; inherited Track2 completion/scene expansion"
+    },
+    {
+      "name": "USIS10K TRAIN",
+      "url": "https://github.com/LiamLian0727/USIS10K",
+      "license": "Apache-2.0 dataset card; upstream image rights may vary",
+      "role": "E034 synthesis clean sources; inherited Track2 completion/scene expansion"
+    },
+    {
+      "name": "Depth Anything V2 Small",
+      "url": "https://github.com/DepthAnything/Depth-Anything-V2",
+      "license": "Apache-2.0 (Small); no Base/Large model used in E034 synthesis",
+      "role": "Offline E034 synthetic degradation; not inference"
+    }
+  ],
+  "external_list_scope": "Only direct Track1 components and its restoration synthesis lineage.",
+  "submission_id": 19050,
+  "Dev_KD": false,
+  "filename_metadata": "Only water/depth from stem.rsplit(\"_\",2); scene prefix discarded.",
+  "inference": "E034+physics, Restormer384, frozen SAM3 selective fusion+TRAINConceptBank, conservativeCascadePSPOTHER. No horizontal-flip ensemble in the exact tested v1/v4 runtime.",
+  "official": {
+    "PSNR": 31.15,
+    "SSIM": 0.911,
+    "sharpness": 0.906,
+    "mIoU": 0.786,
+    "F1": 0.876
+  },
+  "output_encoding": "Historical np.round(255*x), JPEG quality99 4:4:4 optimize=True decode, then RGBPNG; masks uint8L0..4; scoring maxside1024downscaleonly",
+  "E034_training": {
+    "seed": 0,
+    "epochs": 30,
+    "batch_size": 3,
+    "crop": 256,
+    "optimizer": "AdamW",
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "min_lr_ratio": 0.01,
+    "gradient_clip": 0.01,
+    "synthetic_fraction": 0.5,
+    "loss": "Charbonnier +0.5SSIM +0.1edge"
+  },
+  "precision_contract": "See reports/precision_contract.json; historical batch4 reproduced using only duplicates of the current image."
+}

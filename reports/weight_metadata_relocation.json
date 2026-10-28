@@ -1,0 +1,10 @@
+{
+  "metadata_only": true,
+  "changed_fields": [
+    ".cfg_path",
+    ".name_path"
+  ],
+  "old_sha256": "ecbecf2e25e8f2411a74467872831fbbfadb0f77aea81c0c5941372801a7208c",
+  "new_sha256": "b6f6c643d253df6e228f4b50f5fbf216c58ee8f62067c5f03ef991a4b2ef42a3",
+  "text_outputs_unchanged": true
+}

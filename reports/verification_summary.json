@@ -1,0 +1,17 @@
+{
+  "reference_submission": 19050,
+  "images": 20,
+  "restored_bitexact": true,
+  "seg_masks_bitexact": true,
+  "renamed_bitexact": true,
+  "peak_allocated_GiB": 5.597517490386963,
+  "host_environment": "PyTorch2.7.1+CUDA12.8 RTX5080",
+  "network_blocked_run5_passed": true,
+  "root_docker_build_passed": true,
+  "root_docker_gpu_run_passed": false,
+  "root_docker_gpu_reason": "No NVIDIA Container Toolkit; explicit device passthrough confirms Torch2.5.1+cu124 has no sm120 kernels.",
+  "cuda128_container_validation_pending": false,
+  "cuda128_container_run5_passed": true,
+  "cuda128_container_pixels_match_host": false,
+  "CPU_only_supported": false
+}

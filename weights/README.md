@@ -1,0 +1,1 @@
+Extract the supplied tar.gz here. Weights and tokenizer are local; no runtime download. weights_link.yaml intentionally awaits the owner HTTPS URL. Third-party licenses are included inside the archive.

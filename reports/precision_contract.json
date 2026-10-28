@@ -1,0 +1,13 @@
+{
+  "restoration_matmul_TF32": false,
+  "restoration_cudnn_TF32": true,
+  "E034_autocast": "bf16",
+  "restormer384": "FP32; repeat only current input four times, use first result; preserves historical batch4kernel",
+  "SAM3_matmul_TF32": true,
+  "SAM3_cudnn_TF32": true,
+  "SAM3_prompt_autocast": "bf16",
+  "ConceptBank_autocast": "fp16",
+  "CascadePSP": "FP32",
+  "image_independent": true,
+  "repeat_main_and_rename_equal": true
+}

@@ -1,0 +1,200 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  3.845GB
+
+Step 1/5 : FROM pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
+2.5.1-cuda12.4-cudnn9-runtime: Pulling from pytorch/pytorch
+7478e0ac0f23: Pulling fs layer
+15be42192b10: Pulling fs layer
+000f791482e9: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+b952a9d342d7: Pulling fs layer
+4f4fb700ef54: Waiting
+b952a9d342d7: Waiting
+15be42192b10: Verifying Checksum
+15be42192b10: Download complete
+7478e0ac0f23: Verifying Checksum
+7478e0ac0f23: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+b952a9d342d7: Verifying Checksum
+b952a9d342d7: Download complete
+7478e0ac0f23: Pull complete
+15be42192b10: Pull complete
+000f791482e9: Verifying Checksum
+000f791482e9: Download complete
+000f791482e9: Pull complete
+4f4fb700ef54: Pull complete
+b952a9d342d7: Pull complete
+Digest: sha256:c8268a92a69bd500f8be0e665b2630ee006dadaf7bfbc24249141b15ff622755
+Status: Downloaded newer image for pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
+ ---> 946241f40f56
+Step 2/5 : WORKDIR /pkg
+ ---> Running in ba3cb220419c
+ ---> Removed intermediate container ba3cb220419c
+ ---> 68272a099049
+Step 3/5 : COPY . /pkg
+ ---> ac4836f7ac8e
+Step 4/5 : RUN pip install --no-cache-dir -r requirements.txt
+ ---> Running in 04d4111dfb6b
+Collecting numpy<2 (from -r requirements.txt (line 1))
+  Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting pillow==10.4.0 (from -r requirements.txt (line 2))
+  Downloading pillow-10.4.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+Collecting einops==0.8.2 (from -r requirements.txt (line 3))
+  Downloading einops-0.8.2-py3-none-any.whl.metadata (13 kB)
+Collecting opencv-python-headless==4.11.0.86 (from -r requirements.txt (line 4))
+  Downloading opencv_python_headless-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting timm==1.0.30 (from -r requirements.txt (line 5))
+  Downloading timm-1.0.30-py3-none-any.whl.metadata (33 kB)
+Collecting ftfy==6.1.1 (from -r requirements.txt (line 6))
+  Downloading ftfy-6.1.1-py3-none-any.whl.metadata (6.1 kB)
+Collecting regex (from -r requirements.txt (line 7))
+  Downloading regex-2026.9.29-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting iopath==0.1.10 (from -r requirements.txt (line 8))
+  Downloading iopath-0.1.10.tar.gz (42 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting huggingface_hub (from -r requirements.txt (line 9))
+  Downloading huggingface_hub-2.3.0-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.11/site-packages (from -r requirements.txt (line 10)) (6.1.0)
+Collecting pycocotools (from -r requirements.txt (line 11))
+  Downloading pycocotools-2.0.11-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (1.3 kB)
+Collecting scipy (from -r requirements.txt (line 12))
+  Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting pandas (from -r requirements.txt (line 13))
+  Downloading pandas-3.1.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (18 kB)
+Requirement already satisfied: pyyaml in /opt/conda/lib/python3.11/site-packages (from -r requirements.txt (line 14)) (6.0.2)
+Requirement already satisfied: setuptools<81 in /opt/conda/lib/python3.11/site-packages (from -r requirements.txt (line 15)) (72.1.0)
+Requirement already satisfied: torch in /opt/conda/lib/python3.11/site-packages (from timm==1.0.30->-r requirements.txt (line 5)) (2.5.1+cu124)
+Requirement already satisfied: torchvision in /opt/conda/lib/python3.11/site-packages (from timm==1.0.30->-r requirements.txt (line 5)) (0.20.1+cu124)
+Collecting safetensors (from timm==1.0.30->-r requirements.txt (line 5))
+  Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Requirement already satisfied: wcwidth>=0.2.5 in /opt/conda/lib/python3.11/site-packages (from ftfy==6.1.1->-r requirements.txt (line 6)) (0.2.13)
+Requirement already satisfied: tqdm in /opt/conda/lib/python3.11/site-packages (from iopath==0.1.10->-r requirements.txt (line 8)) (4.66.5)
+Requirement already satisfied: typing_extensions in /opt/conda/lib/python3.11/site-packages (from iopath==0.1.10->-r requirements.txt (line 8)) (4.12.2)
+Collecting portalocker (from iopath==0.1.10->-r requirements.txt (line 8))
+  Downloading portalocker-4.4.2-py3-none-any.whl.metadata (10 kB)
+Collecting click<9.0.0,>=8.4.2 (from huggingface_hub->-r requirements.txt (line 9))
+  Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: filelock>=3.10.0 in /opt/conda/lib/python3.11/site-packages (from huggingface_hub->-r requirements.txt (line 9)) (3.16.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /opt/conda/lib/python3.11/site-packages (from huggingface_hub->-r requirements.txt (line 9)) (2024.10.0)
+Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface_hub->-r requirements.txt (line 9))
+  Downloading hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Collecting httpx2<3,>=2.0.0 (from huggingface_hub->-r requirements.txt (line 9))
+  Downloading httpx2-2.16.0-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: packaging>=20.9 in /opt/conda/lib/python3.11/site-packages (from huggingface_hub->-r requirements.txt (line 9)) (24.1)
+INFO: pip is looking at multiple versions of pandas to determine which version is compatible with other requirements. This could take a while.
+Collecting pandas (from -r requirements.txt (line 13))
+  Downloading pandas-3.0.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+Collecting python-dateutil>=2.8.2 (from pandas->-r requirements.txt (line 13))
+  Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting anyio>=4.10 (from httpx2<3,>=2.0.0->huggingface_hub->-r requirements.txt (line 9))
+  Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting httpcore2==2.16.0 (from httpx2<3,>=2.0.0->huggingface_hub->-r requirements.txt (line 9))
+  Downloading httpcore2-2.16.0-py3-none-any.whl.metadata (27 kB)
+Collecting idna>=3.18 (from httpx2<3,>=2.0.0->huggingface_hub->-r requirements.txt (line 9))
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->huggingface_hub->-r requirements.txt (line 9))
+  Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+Collecting h11>=0.16 (from httpcore2==2.16.0->httpx2<3,>=2.0.0->huggingface_hub->-r requirements.txt (line 9))
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Requirement already satisfied: six>=1.6 in /opt/conda/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas->-r requirements.txt (line 13)) (1.16.0)
+Collecting tzdata (from python-dateutil>=2.8.2->pandas->-r requirements.txt (line 13))
+  Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: networkx in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (3.4.2)
+Requirement already satisfied: jinja2 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (3.1.4)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.4.127 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (12.4.127)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.4.127 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (12.4.127)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.4.127 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (12.4.127)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.4.5.8 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (12.4.5.8)
+Requirement already satisfied: nvidia-cufft-cu12==11.2.1.3 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (11.2.1.3)
+Requirement already satisfied: nvidia-curand-cu12==10.3.5.147 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (10.3.5.147)
+Requirement already satisfied: nvidia-cusolver-cu12==11.6.1.9 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (11.6.1.9)
+Requirement already satisfied: nvidia-cusparse-cu12==12.3.1.170 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (12.3.1.170)
+Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (2.21.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.4.127 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (12.4.127)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.4.127 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (12.4.127)
+Requirement already satisfied: triton==3.1.0 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (3.1.0)
+Requirement already satisfied: sympy==1.13.1 in /opt/conda/lib/python3.11/site-packages (from torch->timm==1.0.30->-r requirements.txt (line 5)) (1.13.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /opt/conda/lib/python3.11/site-packages (from sympy==1.13.1->torch->timm==1.0.30->-r requirements.txt (line 5)) (1.3.0)
+Collecting typing_extensions (from iopath==0.1.10->-r requirements.txt (line 8))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in /opt/conda/lib/python3.11/site-packages (from jinja2->torch->timm==1.0.30->-r requirements.txt (line 5)) (3.0.2)
+Downloading pillow-10.4.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 47.1 MB/s eta 0:00:00
+Downloading einops-0.8.2-py3-none-any.whl (65 kB)
+Downloading opencv_python_headless-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (50.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.0/50.0 MB 35.9 MB/s eta 0:00:00
+Downloading timm-1.0.30-py3-none-any.whl (2.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 119.2 MB/s eta 0:00:00
+Downloading ftfy-6.1.1-py3-none-any.whl (53 kB)
+Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 101.4 MB/s eta 0:00:00
+Downloading regex-2026.9.29-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (804 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 805.0/805.0 kB 118.1 MB/s eta 0:00:00
+Downloading huggingface_hub-2.3.0-py3-none-any.whl (855 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 855.2/855.2 kB 55.9 MB/s eta 0:00:00
+Downloading pycocotools-2.0.11-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (493 kB)
+Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 94.2 MB/s eta 0:00:00
+Downloading pandas-3.0.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.1/11.1 MB 101.0 MB/s eta 0:00:00
+Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Downloading hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 104.6 MB/s eta 0:00:00
+Downloading httpx2-2.16.0-py3-none-any.whl (97 kB)
+Downloading httpcore2-2.16.0-py3-none-any.whl (85 kB)
+Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+Downloading portalocker-4.4.2-py3-none-any.whl (129 kB)
+Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Building wheels for collected packages: iopath
+  Building wheel for iopath (setup.py): started
+  Building wheel for iopath (setup.py): finished with status 'done'
+  Created wheel for iopath: filename=iopath-0.1.10-py3-none-any.whl size=31529 sha256=7191c46b9c4b0079560fe48f6d1bff6130482dc2aecd7c3a413907ac3894b780
+  Stored in directory: /tmp/pip-ephem-wheel-cache-ft14dhpg/wheels/ba/5e/16/6117f8fe7e9c0c161a795e10d94645ebcf301ccbd01f66d8ec
+Successfully built iopath
+Installing collected packages: tzdata, typing_extensions, truststore, safetensors, regex, portalocker, pillow, numpy, idna, hf-xet, h11, ftfy, einops, click, scipy, python-dateutil, pycocotools, opencv-python-headless, iopath, httpcore2, anyio, pandas, httpx2, huggingface_hub, timm
+  Attempting uninstall: typing_extensions
+    Found existing installation: typing_extensions 4.12.2
+    Uninstalling typing_extensions-4.12.2:
+      Successfully uninstalled typing_extensions-4.12.2
+  Attempting uninstall: truststore
+    Found existing installation: truststore 0.9.2
+    Uninstalling truststore-0.9.2:
+      Successfully uninstalled truststore-0.9.2
+  Attempting uninstall: pillow
+    Found existing installation: pillow 10.2.0
+    Uninstalling pillow-10.2.0:
+      Successfully uninstalled pillow-10.2.0
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.1.2
+    Uninstalling numpy-2.1.2:
+      Successfully uninstalled numpy-2.1.2
+  Attempting uninstall: idna
+    Found existing installation: idna 3.10
+    Uninstalling idna-3.10:
+      Successfully uninstalled idna-3.10
+  Attempting uninstall: click
+    Found existing installation: click 8.1.7
+    Uninstalling click-8.1.7:
+      Successfully uninstalled click-8.1.7
+Successfully installed anyio-4.15.1 click-8.5.0 einops-0.8.2 ftfy-6.1.1 h11-0.16.0 hf-xet-1.7.0 httpcore2-2.16.0 httpx2-2.16.0 huggingface_hub-2.3.0 idna-3.20 iopath-0.1.10 numpy-1.26.4 opencv-python-headless-4.11.0.86 pandas-3.0.6 pillow-10.4.0 portalocker-4.4.2 pycocotools-2.0.11 python-dateutil-3.0.0 regex-2026.9.29 safetensors-0.8.0 scipy-1.17.1 timm-1.0.30 truststore-0.10.5 typing_extensions-4.16.0 tzdata-2026.5
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[0m ---> Removed intermediate container 04d4111dfb6b
+ ---> df6a1a83d1c9
+Step 5/5 : ENV HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONDONTWRITEBYTECODE=1
+ ---> Running in e165b8226d7f
+ ---> Removed intermediate container e165b8226d7f
+ ---> 9879b576e744
+Successfully built 9879b576e744
+Successfully tagged uwipl-track1-repro:final

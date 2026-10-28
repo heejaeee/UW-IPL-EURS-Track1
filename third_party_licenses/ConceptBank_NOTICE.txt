@@ -1,0 +1,1 @@
+ConceptBank inference adapter derived from https://github.com/pgsmall/ConceptBank at commit3c890c70fce56313e695cbac52add8eba2b67fdc. No LICENSE file was found in that checkout. This notice is attribution, not a grant of rights; confirm terms before public release.

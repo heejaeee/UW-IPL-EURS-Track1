@@ -1,0 +1,27 @@
+/opt/conda/lib/python3.11/site-packages/torch/amp/autocast_mode.py:266: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/pkg/src/semantic.py", line 33, in __init__
+    self.model = build_sam3_image_model(checkpoint_path=checkpoint, load_from_HF=False, device=self.device)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/vendor/sam3/model_builder.py", line 616, in build_sam3_image_model
+    transformer = _create_sam3_transformer()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/vendor/sam3/model_builder.py", line 534, in _create_sam3_transformer
+    decoder: TransformerDecoder = _create_transformer_decoder(use_fa3=use_fa3)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pkg/vendor/sam3/model_builder.py", line 182, in _create_transformer_decoder
+    decoder = TransformerDecoder(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/pkg/vendor/sam3/model/decoder.py", line 300, in __init__
+    coords_h, coords_w = self._get_coords(
+                         ^^^^^^^^^^^^^^^^^
+  File "/pkg/vendor/sam3/model/decoder.py", line 347, in _get_coords
+    coords_h = torch.arange(0, H, device=device, dtype=torch.float32) / H
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx

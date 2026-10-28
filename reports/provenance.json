@@ -1,0 +1,39 @@
+{
+  "binding": {
+    "submission_id": 19050,
+    "download": "source-home/Downloads/19050_results.zip",
+    "candidate": "research/EURS/UW-IPL-Track1-Testing-v4-Boundary.zip",
+    "member_names_exact": true,
+    "sha256_matched_members": {
+      "restored": 1200,
+      "seg_masks": 1200
+    },
+    "different_members": [],
+    "exact_v4_archive_contents": true,
+    "use": "Submission provenance only. No decoding/scoring/training/model selection on testing outputs.",
+    "testing_used_for_K1": false
+  },
+  "concept_train_scenes": [
+    "fish1",
+    "fish11",
+    "fish13",
+    "fish14",
+    "fish15",
+    "fish17",
+    "fish18",
+    "fish2",
+    "fish20",
+    "fish4",
+    "fish5",
+    "fish7",
+    "fish9",
+    "sharkFish",
+    "starfish2",
+    "turtles1"
+  ],
+  "concept_images": 320,
+  "selected_boundary": "v17/conservative_refine",
+  "testing_BN_recalibration": false,
+  "testing_score_fit": false,
+  "static_per_image_inference": true
+}

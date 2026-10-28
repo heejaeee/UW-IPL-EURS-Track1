@@ -1,0 +1,5 @@
+{
+  "SAM3": "Unmodified inference implementation. CPU-only construction is unsupported upstream; diagnostic CPU fallback was reverted. CUDA is required.",
+  "ConceptBank": "Original framework-only adapter: mmseg registry/BaseSegmentor replaced by torch.nn.Module. All prediction methods preserved.",
+  "CascadePSP": "Unmodified inference implementation; downloads explicitly disabled."
+}

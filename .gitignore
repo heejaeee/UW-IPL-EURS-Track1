@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+reports/*.onnx
+reports/*output*/
+weights/*
+!weights/weights_link.yaml
+!weights/README.md

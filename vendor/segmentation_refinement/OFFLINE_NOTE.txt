@@ -1,0 +1,1 @@
+Runtime uses Refiner(download_and_check_model=False). Download utilities are uncalled upstream code. Offline execution was explicitly tested.

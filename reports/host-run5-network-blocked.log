@@ -1,0 +1,31 @@
+checking <EURS_workspace>/UW-IPL-EURS-Track1-Final
+
+ERROR   repro.yaml: contact must be an e-mail address
+ok      METHOD.md
+ok      run.py main() signature
+ERROR   weights are committed in weights/ AND weights/weights_link.yaml exists: keep only one. Delete weights/weights_link.yaml if the committed weights are the ones to use, or remove the committed files and keep the link
+ERROR   weights/weights_link.yaml: `url:` must be an https link (if your weights are committed in weights/, delete weights/weights_link.yaml)
+ok      Dockerfile at the repository root (used instead of the base image + requirements.txt)
+warning vendor/segmentation_refinement/download.py seems to use the network; the reproduction runs with NO network (weights must come from weights/)
+warning vendor/sam3/model_builder.py seems to use the network; the reproduction runs with NO network (weights must come from weights/)
+warning requirements.txt: pin exact versions (name==x.y.z): numpy<2, regex, huggingface_hub, psutil, pycocotools, scipy, pandas, pyyaml, setuptools<81
+warning requirements.txt lists packages the base image already has (numpy, pillow, einops, opencv-python-headless, timm, scipy, pyyaml): installing them would replace the organizers' versions (PyTorch 2.4.0 etc.) and change your results. List ONLY extra packages; leave the file empty if you need none
+<research_workspace>/.env-sam3/lib/python3.12/site-packages/torch/cuda/__init__.py:789: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+{"stage": "restoration", "completed": 1, "total": 5}
+{"stage": "restoration", "completed": 2, "total": 5}
+{"stage": "restoration", "completed": 3, "total": 5}
+{"stage": "restoration", "completed": 4, "total": 5}
+{"stage": "restoration", "completed": 5, "total": 5}
+<research_workspace>/.env-sam3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+{"stage": "segmentation", "completed": 1, "total": 5}
+{"stage": "segmentation", "completed": 2, "total": 5}
+{"stage": "segmentation", "completed": 3, "total": 5}
+{"stage": "segmentation", "completed": 4, "total": 5}
+{"stage": "segmentation", "completed": 5, "total": 5}
+{"stage": "complete", "images": 5, "seconds": 34.86511178617366, "peak_allocated_GiB": 5.597033500671387}
+ok      run.py main() ran on 5 image(s) in 35.3 s (7.07 s/image including start-up)
+
+3 error(s), 4 warning(s)
+NOT READY: fix the errors above

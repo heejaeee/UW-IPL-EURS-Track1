@@ -1,0 +1,106 @@
+{
+  "images": 20,
+  "records": [
+    {
+      "name": "test04_3_55",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test04_7_35",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test04_4_25",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test04_5_100",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test09_6_65",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test09_7_95",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test09_2_65",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test09_4_25",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test10_9_45",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test10_9_40",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test10_3_60",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test11_7_30",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test11_7_5",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test11_6_95",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test19_1_100",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test19_10_80",
+      "restored_identical": true,
+      "seg_masks_identical": true
+    },
+    {
+      "name": "test19_3_50",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test20_4_45",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test20_4_80",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    },
+    {
+      "name": "test20_1_70",
+      "restored_identical": true,
+      "seg_masks_identical": false
+    }
+  ],
+  "all_identical": false
+}

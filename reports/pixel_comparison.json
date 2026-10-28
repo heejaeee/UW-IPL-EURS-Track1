@@ -1,0 +1,267 @@
+{
+  "reference_submission": 19050,
+  "images": 20,
+  "records": [
+    {
+      "name": "test04_3_55",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test04_7_35",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test04_4_25",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test04_5_100",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test09_6_65",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test09_7_95",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test09_2_65",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test09_4_25",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test10_9_45",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test10_9_40",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test10_3_60",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test11_7_30",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test11_7_5",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test11_6_95",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test19_1_100",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test19_10_80",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test19_3_50",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test20_4_45",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test20_4_80",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    },
+    {
+      "name": "test20_1_70",
+      "restored": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      },
+      "seg_masks": {
+        "element_agreement": 1.0,
+        "pixel_agreement": 1.0,
+        "max_abs_error": 0
+      }
+    }
+  ],
+  "reference_archive_sha256": "c81135276afa5c9fdd81ab44ccf47c535c0534216fd6367a01b17a139d09f153"
+}

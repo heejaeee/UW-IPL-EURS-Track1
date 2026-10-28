@@ -1,0 +1,41 @@
+{
+  "images": 5,
+  "all_pixels_identical": false,
+  "records": [
+    {
+      "name": "test04_3_55",
+      "restored_pixel_agreement": 1.0,
+      "seg_masks_pixel_agreement": 1.0
+    },
+    {
+      "name": "test04_4_25",
+      "restored_pixel_agreement": 1.0,
+      "seg_masks_pixel_agreement": 0.9999966091579862
+    },
+    {
+      "name": "test04_5_100",
+      "restored_pixel_agreement": 1.0,
+      "seg_masks_pixel_agreement": 1.0
+    },
+    {
+      "name": "test04_7_35",
+      "restored_pixel_agreement": 1.0,
+      "seg_masks_pixel_agreement": 0.9999983045789931
+    },
+    {
+      "name": "test09_6_65",
+      "restored_pixel_agreement": 1.0,
+      "seg_masks_pixel_agreement": 1.0
+    }
+  ],
+  "network": "none",
+  "container_root": "read-only",
+  "torch": "2.7.1+cu128",
+  "GPU_passthrough": "explicit device nodes and read-only host driver libraries; NVIDIA Container Toolkit unavailable",
+  "runtime_contract_passed": true,
+  "static_metadata_passed": false,
+  "peak_allocated_GiB": 5.597033500671387,
+  "mask_different_pixels": 3,
+  "mask_total_pixels": 3145728,
+  "mask_pixel_agreement": 0.9999990463256836
+}

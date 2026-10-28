@@ -1,0 +1,128 @@
+{
+  "verified_at": "2026-10-28T08:19:22.482912+00:00",
+  "archive_filename": "UW-IPL-Track1-19050-weights.tar.gz",
+  "archive_sha256": "87497b7a5b854ffb79739267fe29423b06f3addc42c7f46e07970d07f473569c",
+  "archive_bytes": 3525648308,
+  "local_archive_sha256_matches_supplied": true,
+  "official_download_hash_check_passed": true,
+  "extracted_file_count": 13,
+  "all_extracted_files_match_local_archive": true,
+  "required_runtime_weight_paths_present": [
+    "sam3.pt",
+    "e034.pt",
+    "restormer384.pt",
+    "concept_bank.pt",
+    "inference.json",
+    "rsuigm_params.json",
+    "cascadepsp/model"
+  ],
+  "runtime_tokenizer_in_repository": true,
+  "weights_directly_under_model_dir": true,
+  "download_marker": [
+    "cascadepsp",
+    "concept_bank.pt",
+    "e034.pt",
+    "inference.json",
+    "licenses",
+    "restormer384.pt",
+    "rsuigm_params.json",
+    "sam3.pt",
+    "tokenizer"
+  ],
+  "files": [
+    {
+      "path": "sam3.pt",
+      "bytes": 3450062241,
+      "sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+      "matches_archive": true
+    },
+    {
+      "path": "e034.pt",
+      "bytes": 104612315,
+      "sha256": "2acab3dcfb7b24cfb48cca64654dd896d5c731ad73c327ea9f9ea2ce4f3718ac",
+      "matches_archive": true
+    },
+    {
+      "path": "restormer384.pt",
+      "bytes": 13958027,
+      "sha256": "0fbb99f78f2a97c6f32d87b40e124d345161670556bcb441cabf50f9a5100b9f",
+      "matches_archive": true
+    },
+    {
+      "path": "concept_bank.pt",
+      "bytes": 414353,
+      "sha256": "b6f6c643d253df6e228f4b50f5fbf216c58ee8f62067c5f03ef991a4b2ef42a3",
+      "matches_archive": true
+    },
+    {
+      "path": "cascadepsp/model",
+      "bytes": 271067364,
+      "sha256": "60826ace3385961cdf8608abbdf1234cd22379303b97edf96f18d67bba769cfa",
+      "matches_archive": true
+    },
+    {
+      "path": "rsuigm_params.json",
+      "bytes": 18877,
+      "sha256": "4d837d30f5fa8d63d94f667cf3d056a605435fcbaf90fc576e984dd9ab049f21",
+      "matches_archive": true
+    },
+    {
+      "path": "inference.json",
+      "bytes": 617,
+      "sha256": "906e8a36efe8182d0ca19d5374cc707ad988cc6b284ae5b72d881c04b31fdfc4",
+      "matches_archive": true
+    },
+    {
+      "path": "tokenizer/bpe_simple_vocab_16e6.txt.gz",
+      "bytes": 1356917,
+      "sha256": "924691ac288e54409236115652ad4aa250f48203de50a9e4722a6ecd48d6804a",
+      "matches_archive": true
+    },
+    {
+      "path": "licenses/CascadePSP_LICENSE",
+      "bytes": 1083,
+      "sha256": "2a522e552374cf3e5df6db95502257e538daa276a237409c9a4ff4008a88c840",
+      "matches_archive": true
+    },
+    {
+      "path": "licenses/ConceptBank_NOTICE.txt",
+      "bytes": 265,
+      "sha256": "77fdd2d9930e7a46e63a79d9e83bfee6d110f73186f5626ed17d9a752d9c4730",
+      "matches_archive": true
+    },
+    {
+      "path": "licenses/NAFNet_LICENSE",
+      "bytes": 12466,
+      "sha256": "a29ecef3456149898f08e4c71b11b33e7d333664e087bc212e84e18ddd6599ad",
+      "matches_archive": true
+    },
+    {
+      "path": "licenses/Restormer_LICENSE",
+      "bytes": 1090,
+      "sha256": "2b93776512924bc095ec5d97a79d76cf1ab401ae641d1ae1f46e94f1c53a2e59",
+      "matches_archive": true
+    },
+    {
+      "path": "licenses/SAM3_LICENSE",
+      "bytes": 7353,
+      "sha256": "4dea99bfaa016e21bc860d73f344236bd1e5c4977d1a9a8fd32f822b500ae1be",
+      "matches_archive": true
+    }
+  ],
+  "url": "https://huggingface.co/hjkwon1996/UW-IPL-EURS-Track1-weights/resolve/main/UW-IPL-Track1-19050-weights.tar.gz",
+  "contact": "hkwon4@uw.edu",
+  "download_exit_code": 0,
+  "static_check_exit_code": 0,
+  "source_static_check_exit_code": 0,
+  "static_errors": 0,
+  "static_warnings": 3,
+  "started_at": "2026-10-28T08:17:02.841484+00:00",
+  "download_completed_at": "2026-10-28T08:18:36.643167+00:00",
+  "checker_command": "python repro_check.py . --download-weights",
+  "static_command": "python repro_check.py .",
+  "gpu_inference_rerun": false,
+  "github_push_performed": false,
+  "downloaded_weights_committed": false,
+  "checker_sha256": "49f8dce1e5604b4180cf22e7fe9de157f094c1897855891152046e0d88229644",
+  "official_checker_unmodified_from_previous_commit": true
+}

@@ -1,0 +1,13 @@
+checking <temporary-package>
+
+ERROR   repro.yaml: contact must be an e-mail address
+ok      METHOD.md
+ok      run.py main() signature
+ok      weights link
+ok      Dockerfile at the repository root (used instead of the base image + requirements.txt)
+warning vendor/segmentation_refinement/download.py seems to use the network; the reproduction runs with NO network (weights must come from weights/)
+warning vendor/sam3/model_builder.py seems to use the network; the reproduction runs with NO network (weights must come from weights/)
+warning requirements.txt lists packages the base image already has (numpy, pillow, einops, opencv-python-headless, timm, scipy, pyyaml): installing them would replace the organizers' versions (PyTorch 2.4.0 etc.) and change your results. List ONLY extra packages; leave the file empty if you need none
+
+1 error(s), 3 warning(s)
+NOT READY: fix the errors above

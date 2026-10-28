@@ -125,5 +125,18 @@
     "synthetic_fraction": 0.5,
     "loss": "Charbonnier +0.5SSIM +0.1edge"
   },
-  "precision_contract": "See reports/precision_contract.json; historical batch4 reproduced using only duplicates of the current image."
+  "precision_contract": "See reports/precision_contract.json; historical batch4 reproduced using only duplicates of the current image.",
+  "contact": "hkwon4@uw.edu",
+  "weight_archive": {
+    "filename": "UW-IPL-Track1-19050-weights.tar.gz",
+    "sha256": "87497b7a5b854ffb79739267fe29423b06f3addc42c7f46e07970d07f473569c",
+    "bytes": 3525648308,
+    "url_pending": false,
+    "contains_licenses": true,
+    "url": "https://huggingface.co/hjkwon1996/UW-IPL-EURS-Track1-weights/resolve/main/UW-IPL-Track1-19050-weights.tar.gz",
+    "uploaded_by_owner": true,
+    "download_verified": true,
+    "extraction_verified": true,
+    "verification_report": "reports/hf_weights_verification.json"
+  }
 }

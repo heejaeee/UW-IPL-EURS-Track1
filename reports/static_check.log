@@ -1,14 +1,14 @@
-checking <EURS_workspace>/UW-IPL-EURS-Track1-Final
+checking <repository>
 
-ERROR   repro.yaml: contact must be an e-mail address
+ok      repro.yaml is valid
 ok      METHOD.md
 ok      run.py main() signature
-ERROR   weights/weights_link.yaml: `url:` must be an https link (if your weights are committed in weights/, delete weights/weights_link.yaml)
+ok      weights link
 note    the link is not downloaded by this check; to run --run on a link-based repository first fetch the file with:  python repro_check.py . --download-weights
 ok      Dockerfile at the repository root (used instead of the base image + requirements.txt)
 warning vendor/segmentation_refinement/download.py seems to use the network; the reproduction runs with NO network (weights must come from weights/)
 warning vendor/sam3/model_builder.py seems to use the network; the reproduction runs with NO network (weights must come from weights/)
 warning requirements.txt lists packages the base image already has (numpy, pillow, einops, opencv-python-headless, timm, scipy, pyyaml): installing them would replace the organizers' versions (PyTorch 2.4.0 etc.) and change your results. List ONLY extra packages; leave the file empty if you need none
 
-2 error(s), 3 warning(s)
-NOT READY: fix the errors above
+0 error(s), 3 warning(s)
+READY to hand in (as far as this check can tell)

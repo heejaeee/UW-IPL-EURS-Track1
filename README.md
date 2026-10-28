@@ -1,6 +1,6 @@
 # UW-IPL EURS Track1 reproduction
 
-Local reproduction package using the unmodified official [template](https://github.com/CeviKle/EURS-MaCVi2027-repro-template). No public push or upload has been performed.
+Local reproduction package using the unmodified official [template](https://github.com/CeviKle/EURS-MaCVi2027-repro-template). The owner published the weight archive on Hugging Face; no GitHub push has been performed.
 
 Read METHOD.md, FACTSHEET.json, DATA_AND_LICENSES.md and STATUS_KO.md. Runtime entrypoints use package-relative paths and local weights. Network access is not needed during inference/export.
 
@@ -14,7 +14,7 @@ The weight archive and a local extracted copy are kept outside this link-based G
 87497b7a5b854ffb79739267fe29423b06f3addc42c7f46e07970d07f473569c
 ```
 
-After the owner fills the HTTPS URL, use `python repro_check.py . --download-weights`. The official downloader records the extracted files so they are not mistaken for committed weights. Do not change the archive SHA-256. The static checker cannot pass with a blank URL or contact; functional checks are reported separately.
+The Hugging Face URL, filename and SHA-256 are recorded in `weights/weights_link.yaml`. Run `python repro_check.py . --download-weights` to download, verify and extract the archive. The official downloader records the extracted files so they are not mistaken for committed weights. Do not change the archive SHA-256 or commit the downloaded files. The team contact email is recorded in `repro.yaml`; functional checks are reported separately.
 
 ```sh
 docker build -t uwipl-track1-repro:final .
@@ -31,6 +31,6 @@ A portable verification tool is included:
 python verify_reference.py --weights WEIGHTS_DIR --input INPUT_DIR --reference-zip RESULTS_ZIP --report comparison.json
 ```
 
-It compares outputs and randomized filename prefixes without fitting parameters. After completing owner metadata, rerun the checker and refresh `SHA256SUMS.txt` before hand-in.
+It compares outputs and randomized filename prefixes without fitting parameters. After any package change, rerun the checker and refresh `SHA256SUMS.txt` before hand-in.
 
 The three static warnings concern upstream optional download functions and pinned packages that overlap the default image. Runtime supplies local weights, disables network access and uses the explicitly requested custom Docker base. These warnings are retained, not suppressed.

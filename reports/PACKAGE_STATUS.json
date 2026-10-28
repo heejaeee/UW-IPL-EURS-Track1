@@ -10,20 +10,26 @@
     "peak_allocated_GiB": 5.597517490386963,
     "requested_torch251_GPU_verified": false,
     "reason": "The local RTX 5080 is unsupported by PyTorch 2.5.1/CUDA 12.4; additional CUDA 12.8 verification is separate.",
-    "static_missing": [
-      "contact email",
-      "weights HTTPS URL"
-    ],
+    "static_missing": [],
     "weights": {
       "filename": "UW-IPL-Track1-19050-weights.tar.gz",
       "sha256": "87497b7a5b854ffb79739267fe29423b06f3addc42c7f46e07970d07f473569c",
       "bytes": 3525648308,
-      "url_pending": true,
-      "contains_licenses": true
+      "url_pending": false,
+      "contains_licenses": true,
+      "url": "https://huggingface.co/hjkwon1996/UW-IPL-EURS-Track1-weights/resolve/main/UW-IPL-Track1-19050-weights.tar.gz",
+      "uploaded_by_owner": true,
+      "download_verified": true,
+      "extraction_verified": true,
+      "verification_report": "reports/hf_weights_verification.json"
     },
-    "static_errors": 2,
+    "static_errors": 0,
     "static_warnings": 3,
-    "static_warning_explanation": "Upstream optional download functions are not called (local weights and offline run verified). Requirements pin dependencies for the explicitly requested custom Docker image."
+    "static_warning_explanation": "Upstream optional download functions are not called (local weights and offline run verified). Requirements pin dependencies for the explicitly requested custom Docker image.",
+    "contact": "hkwon4@uw.edu",
+    "hf_download_verified": true,
+    "hf_extraction_verified": true,
+    "verification_report": "reports/hf_weights_verification.json"
   },
   "Track2": {
     "directory": "UW-IPL-EURS-Track2-Final",
@@ -55,5 +61,7 @@
     "OTHER_recall": 0.25321457715211143,
     "candidate_criteria_passed": true,
     "separate_from_repro_best": true
-  }
+  },
+  "owner_uploaded_track1_weights": true,
+  "uploaded_note": "The uploaded=false field refers to assistant uploads; the owner uploaded the Track1 weights to Hugging Face."
 }

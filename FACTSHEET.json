@@ -59,7 +59,7 @@
     {
       "name": "SAM3",
       "url": "https://github.com/facebookresearch/sam3",
-      "license": "SAM License, November19 2025; bundled actual LICENSE, not MIT despite pyproject classifier",
+      "license": "SAM License, November 19, 2025; bundled actual LICENSE, not MIT despite pyproject classifier",
       "role": "Track1 frozen image/text model; Track2 logit and feature teacher"
     },
     {
